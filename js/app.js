@@ -3,6 +3,8 @@ function getRandomInt(max) {
   }
 const p = document.createElement("p")
 const div = document.querySelector("div")
+const btn = document.querySelector("button")
+const input = document.querySelector("input")
 const mot = "chocolat"
 const tmb=[]
 const t=[]
@@ -19,3 +21,11 @@ while(i<mot.length){
 }
 p.textContent=tmb.join("")
 div.appendChild(p)
+btn.addEventListener("click",()=>{
+    if(input.value==mot){
+        alert("vous avez gagner")
+    }
+    else{
+        alert("perdu")
+    }
+})
